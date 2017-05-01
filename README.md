@@ -54,7 +54,12 @@ example output to screen (on my local macbook-pro):
 
 ```
 switch-os:17.05.0.1-aplha
-docker run     --rm=true     --name biolinux     -v /Users/sjnewhouse:/home/sjnewhouse     -e USER=sjnewhouse -e USERID=501     -w=/home/sjnewhouse     -i -t yeban/biolinux:8 bash
+------------------------
 Running:yeban/biolinux:8
-root@4164cdb4082d:/home/sjnewhouse# 
+Setting Container UID: 501
+Setting Container USER: sjnewhouse
+Mounting HOST Volume /Users/sjnewhouse to Container Volume: /home/sjnewhouse
+Setting Container WORKDIR: /home/sjnewhouse
+docker run     --rm=true     --name biolinux     -v /Users/sjnewhouse:/home/sjnewhouse     -e USER=sjnewhouse -e USERID=501     -w=/home/sjnewhouse     -i -t yeban/biolinux:8 bash
+root@1ad7e1e448a1:/home/sjnewhouse# 
 ```
