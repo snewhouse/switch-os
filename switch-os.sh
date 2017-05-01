@@ -33,8 +33,9 @@ CMD="docker run \
     -i -t ${DOCKER_OS} bash"
 
 # print to screen
-echo -e "Runing:
-$CMD\n"
+echo -e "switch-os:${VERSION}
+$CMD
+Running:${DOCKER_OS}"
 
 # run it
 $CMD
