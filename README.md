@@ -8,7 +8,7 @@ Seamlessly switch between host OS and guest OS using Docker :whale: .
 Inspired by: [oswitch](https://github.com/wurmlab/oswitch)
 
 ## Requirements
-- Docker (If on Windows or Mac use [kitematic](https://kitematic.com/) or see [Docker for Mac](https://docs.docker.com/docker-for-mac/install/) or [Docker for Windows](hhttps://docs.docker.com/docker-for-windows/install/) )
+- Docker (If on Windows or Mac use [kitematic](https://kitematic.com/) or see [Docker for Mac](https://docs.docker.com/docker-for-mac/install/) or [Docker for Windows](https://docs.docker.com/docker-for-windows/install/) )
 - bash
 
 ## Run Ubuntu:16.04
