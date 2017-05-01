@@ -15,6 +15,7 @@ Inspired by: [oswitch](https://github.com/wurmlab/oswitch)
 - sets Docker `UID` ENV to HOST `$UID`
 - sets Docker `USER` ENV to HOST `$USER`
 - mounts HOST user `$HOME` to Docker Volume `/home/$USER`
+- sets Docker WORKDIR to `/home/$USER`
 
 **The `docker run` command**
 ```bash
