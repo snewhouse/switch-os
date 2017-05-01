@@ -7,15 +7,22 @@ VERSION="17.05.0.1-alpha" ## YY.MM.VV
 AUTHOR="Stephen Newhouse <stephen.j.newhouse@gmail.com>"
 
 # select Docker OS
-if [[ "${1}" == "list" ]]; then
+if [[ $# -eq 0 || "${1}" == "list" ]]; then
     echo -e "
     ------------------------
     [switch-os ]: Seamlessly switch between Os's using Docker
     [Version   ]: ${VERSION}
     ------------------------
+
     Available OS's:
-     - ubuntu:16.04     [Usage: switch-os.sh ubuntu   ]
-     - yeban/biolinux:8 [Usage: switch-os.sh biolinux ]\n"
+     - ubuntu:16.04     [ubuntu]
+     - yeban/biolinux:8 [biolinux]
+
+     Usage: switch-os.sh <OS>
+
+     eg:
+     
+        switch-os.sh ubuntu\n"
      exit 1
 elif [[ "${1}" == "ubuntu" ]]; then
     DOCKER_OS="ubuntu:16.04"
