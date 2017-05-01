@@ -12,9 +12,9 @@ Inspired by: [oswitch](https://github.com/wurmlab/oswitch)
 - bash
 
 ## Features
-- sets Docker `UID` ENV to host `$UID`
-- sets Docker `USER` ENV to host `$USER`
-- mounts user `$HOME` to Docker Volume `/home/$USER`
+- sets Docker `UID` ENV to HOST `$UID`
+- sets Docker `USER` ENV to HOST `$USER`
+- mounts HOST user `$HOME` to Docker Volume `/home/$USER`
 
 **The `docker run` command**
 ```bash
