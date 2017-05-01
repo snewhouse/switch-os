@@ -39,9 +39,14 @@ example output to screen (on my local macbook-pro):
 
 ```
 switch-os:17.05.0.1-aplha
-docker run     --rm=true     --name ubuntu     -v /Users/sjnewhouse:/home/sjnewhouse     -e USER=sjnewhouse -e USERID=501     -w=/home/sjnewhouse     -i -t ubuntu:16.04 bash
+------------------------
 Running:ubuntu:16.04
-root@d411cddb3656:/home/sjnewhouse# 
+Setting Container UID: 501
+Setting Container USER: sjnewhouse
+Mounting HOST Volume /Users/sjnewhouse to Container Volume: /home/sjnewhouse
+Setting Container WORKDIR: /home/sjnewhouse
+docker run     --rm=true     --name ubuntu     -v /Users/sjnewhouse:/home/sjnewhouse     -e USER=sjnewhouse -e USERID=501     -w=/home/sjnewhouse     -i -t ubuntu:16.04 bash
+root@703dddb3a10a:/home/sjnewhouse# 
 ```
 
 ## Run biolinux:8
