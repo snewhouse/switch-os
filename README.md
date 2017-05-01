@@ -15,7 +15,7 @@ output to screen...
 switch-os:17.05.0.1-aplha
 docker run     --rm=true     --name ubuntu     -v /Users/sjnewhouse:/home/sjnewhouse     -e USER=sjnewhouse -e USERID=501     -w=/home/sjnewhouse     -i -t ubuntu:16.04 bash
 Running:ubuntu:16.04
-
+root@d411cddb3656:/home/sjnewhouse# 
 ```
 
 
