@@ -11,13 +11,30 @@ Inspired by: [oswitch](https://github.com/wurmlab/oswitch)
 - Docker (If on Windows or Mac use [kitematic](https://kitematic.com/) or see [Docker for Mac](https://docs.docker.com/docker-for-mac/install/) or [Docker for Windows](https://docs.docker.com/docker-for-windows/install/) )
 - bash
 
+## Features
+- sets Docker `UID` ENV to host `$UID`
+- sets Docker `USER` ENV to host `$USER`
+- mounts user `$HOME` to Docker Volume `/home/$USER`
+
+**The `docker run` command**
+```bash
+docker run \
+    --rm=true \
+    --name ${1} \
+    -v ${HOME}:/home/${USER} \
+    -e USER=$USER -e USERID=$UID \
+    -w="/home/${USER}" \
+    -i -t ${DOCKER_OS} bash"
+```
+
+
 ## Run Ubuntu:16.04
 
 ```bash
 switch-os.sh ubuntu
 ```
 
-output to screen...
+example output to screen (on my local macbook-pro):
 
 ```
 switch-os:17.05.0.1-aplha
@@ -32,7 +49,7 @@ root@d411cddb3656:/home/sjnewhouse#
 switch-os.sh biolinux
 ```
 
-output to screen...
+example output to screen (on my local macbook-pro):
 
 ```
 switch-os:17.05.0.1-aplha
