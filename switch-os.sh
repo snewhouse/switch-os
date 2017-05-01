@@ -34,8 +34,13 @@ CMD="docker run \
 
 # print to screen
 echo -e "switch-os:${VERSION}
-$CMD
-Running:${DOCKER_OS}"
+------------------------
+Running:${DOCKER_OS}
+Setting Container UID: ${UID}
+Setting Container USER: ${USER}
+Mounting HOST Volume ${HOME} to Container Volume: /home/${USER}
+Setting Container WORKDIR: /home/${USER}
+${CMD}"
 
 # run it
-$CMD
+${CMD}
