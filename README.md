@@ -9,6 +9,16 @@ Inspired by: [oswitch](https://github.com/wurmlab/oswitch)
 switch-os.sh ubuntu
 ```
 
+output to screen...
+
+```
+switch-os:17.05.0.1-aplha
+docker run     --rm=true     --name ubuntu     -v /Users/sjnewhouse:/home/sjnewhouse     -e USER=sjnewhouse -e USERID=501     -w=/home/sjnewhouse     -i -t ubuntu:16.04 bash
+Running:ubuntu:16.04
+
+```
+
+
 ## Run biolinux:8
 
 ```bash
