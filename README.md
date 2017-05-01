@@ -1,5 +1,5 @@
 # switch-os
-Seamlessly switch between host OS and guest OS using Docker :whale: .
+Seamlessly switch between host OS and guest OS using [Docker](https://www.docker.com/what-docker) :whale: .
 
 ## Current Guest/Docker OS's:
 - ubuntu:16.04  
