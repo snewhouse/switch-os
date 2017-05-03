@@ -6,14 +6,6 @@
 VERSION="17.05.0.1-alpha" ## YY.MM.VV
 AUTHOR="Stephen Newhouse <stephen.j.newhouse@gmail.com>"
 
-#!/usr/bin/env bash
-# OS Switcher
-# Run Docker based OS on Host OS
-# Inspired by: https://github.com/wurmlab/oswitch
-
-VERSION="17.05.0.1-aplha" ## YY.MM.VV
-AUTHOR="Stephen Newhouse <stephen.j.newhouse@gmail.com>"
-
 # Function: List Docker Images
 function list_docker_images() {
     docker images | sed '1d' | awk '{print "\t"$1":"$2}'
