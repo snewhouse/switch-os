@@ -9,11 +9,18 @@ Inspired by: [oswitch](https://github.com/wurmlab/oswitch)
 - Docker (If on Windows or Mac use [kitematic](https://kitematic.com/) or see [Docker for Mac](https://docs.docker.com/docker-for-mac/install/) or [Docker for Windows](https://docs.docker.com/docker-for-windows/install/) )
 - bash
 
+## Get it
+
+```bash
+git clone https://github.com/snewhouse/switch-os.git
+```
+
 ## Features
 - sets Docker `UID` ENV to HOST `$UID`
 - sets Docker `USER` ENV to HOST `$USER`
 - mounts HOST user `$HOME` to Docker Volume `/home/$USER`
 - sets Docker WORKDIR to `/home/$USER`
+- Option to remove container on exit (default: true)
 
 ## Usage
 
@@ -41,7 +48,7 @@ Docker Hub, if its available.
 **The `docker run` command**
 ```bash
 # run selected Docker OS
-CMD="docker run --rm=${2} \
+CMD="docker run --rm=${2:-true} \
     --name ${NAME}_$(date +%y%m%d%M) \
     -v ${HOME}:/home/${USER} \
     -e USER=${USER} \
