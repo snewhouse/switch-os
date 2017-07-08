@@ -24,9 +24,17 @@ if [[ $# -eq 0 ]]; then
 
      See Usage below.
 
-     Usage:       switch-os.sh <REPOSITORY:TAG>
+     Usage:
+            switch-os.sh <REPOSITORY:TAG> <true|false>
 
-     List Images: switch-os.sh list
+            <true|false>: The second flag sets the option to remove the
+            container on exit.
+            Set this to false if you make changes to the running image
+            and wish to commit the changes for future use.
+
+     List Images:
+
+            switch-os.sh list
 
      eg:
      
@@ -36,21 +44,22 @@ if [[ $# -eq 0 ]]; then
      exit 1
 elif [[ "${1}" == "list" ]]; then
     docker images
+    exit 1
 elif [[ "${1}" == "ubuntu" ]]; then
     DOCKER_OS="ubuntu:16.04"
 elif [[ "${1}" == "biolinux" ]]; then
     DOCKER_OS="yeban/biolinux:8"
 fi
 
+NAME=$(echo ${1} | sed s/:/_/g )
+
 # run selected Docker OS
-CMD="docker run \
-    --rm=true \
-    --name ${1} \
+CMD="docker run --rm=${2} \
+    --name ${NAME}_$(date +%y%m%d%M) \
     -v ${HOME}:/home/${USER} \
-    -e HOME="/home/${USER}"
-    -e USER=$USER \
-    -e USERID=$UID \
-    -w="/home/${USER}" \
+    -e USER=${USER} \
+    -e USERID=${UID} \
+    -w=/home/${USER} \
     -i -t ${DOCKER_OS} bash"
 
 # print to screen
@@ -61,6 +70,7 @@ Setting Container UID: ${UID}
 Setting Container USER: ${USER}
 Mounting HOST Volume ${HOME} to Container Volume: /home/${USER}
 Setting Container WORKDIR: /home/${USER}
+Remove Container on Exit (--rm=true|false): ${2}
 ${CMD}"
 
 # run it
