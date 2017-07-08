@@ -7,7 +7,7 @@ VERSION="17.05.0.1-alpha" ## YY.MM.VV
 AUTHOR="Stephen Newhouse <stephen.j.newhouse@gmail.com>"
 
 # select Docker OS
-if [[ $# -eq 0 || "${1}" == "list" ]]; then
+if [[ $# -eq 0 ]]; then
     echo -e "
     ------------------------
     [switch-os ]: Seamlessly switch between Os's using Docker
@@ -18,12 +18,20 @@ if [[ $# -eq 0 || "${1}" == "list" ]]; then
      - ubuntu:16.04     [ubuntu]
      - yeban/biolinux:8 [biolinux]
 
-     Usage: switch-os.sh <OS>
+     To use any other image on your machine, just provide <REPOSITORY:TAG>
+     See Usage below.
+
+     Usage:       switch-os.sh <REPOSITORY:TAG>
+
+     List Images: switch-os.sh list
 
      eg:
      
-        switch-os.sh ubuntu\n"
+        switch-os.sh ubuntu\n
+        switch-os.sh ubuntu:16.04-v0.0.1\n"
      exit 1
+elif [[ "${1}" == "list" ]]; then
+    docker images
 elif [[ "${1}" == "ubuntu" ]]; then
     DOCKER_OS="ubuntu:16.04"
 elif [[ "${1}" == "biolinux" ]]; then
