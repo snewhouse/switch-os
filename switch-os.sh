@@ -9,16 +9,19 @@ AUTHOR="Stephen Newhouse <stephen.j.newhouse@gmail.com>"
 # select Docker OS
 if [[ $# -eq 0 ]]; then
     echo -e "
-    ------------------------
+    ------------------------------------------------------------
     [switch-os ]: Seamlessly switch between Os's using Docker
     [Version   ]: ${VERSION}
-    ------------------------
+    ------------------------------------------------------------
 
     Available OS's:
      - ubuntu:16.04     [ubuntu]
      - yeban/biolinux:8 [biolinux]
 
      To use any other image on your machine, just provide <REPOSITORY:TAG>
+     If image is not already on your system, Docker will pull it from
+     Docker Hub, if its available.
+
      See Usage below.
 
      Usage:       switch-os.sh <REPOSITORY:TAG>
@@ -28,7 +31,8 @@ if [[ $# -eq 0 ]]; then
      eg:
      
         switch-os.sh ubuntu\n
-        switch-os.sh ubuntu:16.04-v0.0.1\n"
+        switch-os.sh ubuntu:16.04-v0.0.1\n
+     ------------------------------------------------------------"
      exit 1
 elif [[ "${1}" == "list" ]]; then
     docker images
