@@ -1,10 +1,9 @@
 # switch-os
-Seamlessly switch between host OS and guest OS using [Docker](https://www.docker.com/what-docker) :whale: .
+Seamlessly switch between host OS and guest OS using [Docker](https://www.docker.com/what-docker) :whale: . 
+Inspired by: [oswitch](https://github.com/wurmlab/oswitch)
 
 **VERSION=17.07.v0.1**  
 **AUTHOR=Stephen Newhouse <stephen.j.newhouse@gmail.com>**  
-
-Inspired by: [oswitch](https://github.com/wurmlab/oswitch)
 
 ## Requirements
 - Docker (If on Windows or Mac use [kitematic](https://kitematic.com/) or see [Docker for Mac](https://docs.docker.com/docker-for-mac/install/) or [Docker for Windows](https://docs.docker.com/docker-for-windows/install/) )
