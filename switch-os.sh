@@ -43,7 +43,9 @@ CMD="docker run \
     --rm=true \
     --name ${1} \
     -v ${HOME}:/home/${USER} \
-    -e USER=$USER -e USERID=$UID \
+    -e HOME="/home/${USER}"
+    -e USER=$USER \
+    -e USERID=$UID \
     -w="/home/${USER}" \
     -i -t ${DOCKER_OS} bash"
 
