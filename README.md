@@ -5,6 +5,8 @@ Inspired by: [oswitch](https://github.com/wurmlab/oswitch)
 **VERSION=17.07.v0.1**  
 **AUTHOR=Stephen Newhouse <stephen.j.newhouse@gmail.com>**  
 
+[![DOI](https://zenodo.org/badge/89929646.svg)](https://zenodo.org/badge/latestdoi/89929646)
+
 ## Requirements
 - Docker (If on Windows or Mac use [kitematic](https://kitematic.com/) or see [Docker for Mac](https://docs.docker.com/docker-for-mac/install/) or [Docker for Windows](https://docs.docker.com/docker-for-windows/install/) )
 - bash
