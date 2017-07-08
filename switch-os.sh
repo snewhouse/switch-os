@@ -38,8 +38,8 @@ if [[ $# -eq 0 ]]; then
 
      eg:
      
-        switch-os.sh ubuntu\n
-        switch-os.sh ubuntu:16.04-v0.0.1\n
+        switch-os.sh ubuntu true \n
+        switch-os.sh ubuntu:16.04-v0.0.1 false\n
      ------------------------------------------------------------"
      exit 1
 elif [[ "${1}" == "list" ]]; then

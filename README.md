@@ -20,7 +20,7 @@ git clone https://github.com/snewhouse/switch-os.git
 - sets Docker `USER` ENV to HOST `$USER`
 - mounts HOST user `$HOME` to Docker Volume `/home/$USER`
 - sets Docker WORKDIR to `/home/$USER`
-- Option to remove container on exit (default: true)
+- Option to remove container on exit 
 
 ## Usage
 
@@ -48,7 +48,7 @@ Docker Hub, if its available.
 **The `docker run` command**
 ```bash
 # run selected Docker OS
-CMD="docker run --rm=${2:-true} \
+CMD="docker run --rm=${2} \
     --name ${NAME}_$(date +%y%m%d%M) \
     -v ${HOME}:/home/${USER} \
     -e USER=${USER} \
