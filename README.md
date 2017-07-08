@@ -1,6 +1,9 @@
 # switch-os
 Seamlessly switch between host OS and guest OS using [Docker](https://www.docker.com/what-docker) :whale: .
 
+**VERSION=17.07.v0.1**  
+**AUTHOR=Stephen Newhouse <stephen.j.newhouse@gmail.com>**  
+
 ## Current Guest/Docker OS's:
 - ubuntu:16.04  
 - yeban/biolinux:8
@@ -17,54 +20,49 @@ Inspired by: [oswitch](https://github.com/wurmlab/oswitch)
 - mounts HOST user `$HOME` to Docker Volume `/home/$USER`
 - sets Docker WORKDIR to `/home/$USER`
 
+## Usage
+
+     Usage:
+            switch-os.sh <REPOSITORY:TAG> <true|false>
+            
+
+            <true|false>: The second flag sets the option to remove the
+            container on exit. Set this to false if you make changes to the 
+            running image and wish to commit the changes for future use.
+            
+      List Images:
+      
+            switch-os.sh list      
+
 **The `docker run` command**
 ```bash
-docker run \
-    --rm=true \
-    --name ${1} \
+# run selected Docker OS
+CMD="docker run --rm=${2} \
+    --name ${NAME}_$(date +%y%m%d%M) \
     -v ${HOME}:/home/${USER} \
-    -e USER=$USER -e USERID=$UID \
-    -w="/home/${USER}" \
+    -e USER=${USER} \
+    -e USERID=${UID} \
+    -w=/home/${USER} \
     -i -t ${DOCKER_OS} bash"
 ```
 
 
-## Run Ubuntu:16.04
+## Example: Run Ubuntu:16.04
 
 ```bash
-switch-os.sh ubuntu
+switch-os.sh ubuntu true
 ```
 
 example output to screen (on my local macbook-pro):
 
 ```
-switch-os:17.05.0.1-aplha
+switch-os:17.07.v0.1
 ------------------------
-Running:ubuntu:16.04
+Running:
 Setting Container UID: 501
 Setting Container USER: sjnewhouse
 Mounting HOST Volume /Users/sjnewhouse to Container Volume: /home/sjnewhouse
 Setting Container WORKDIR: /home/sjnewhouse
-docker run     --rm=true     --name ubuntu     -v /Users/sjnewhouse:/home/sjnewhouse     -e USER=sjnewhouse -e USERID=501     -w=/home/sjnewhouse     -i -t ubuntu:16.04 bash
-root@703dddb3a10a:/home/sjnewhouse# 
-```
-
-## Run biolinux:8
-
-```bash
-switch-os.sh biolinux
-```
-
-example output to screen (on my local macbook-pro):
-
-```
-switch-os:17.05.0.1-aplha
-------------------------
-Running:yeban/biolinux:8
-Setting Container UID: 501
-Setting Container USER: sjnewhouse
-Mounting HOST Volume /Users/sjnewhouse to Container Volume: /home/sjnewhouse
-Setting Container WORKDIR: /home/sjnewhouse
-docker run     --rm=true     --name biolinux     -v /Users/sjnewhouse:/home/sjnewhouse     -e USER=sjnewhouse -e USERID=501     -w=/home/sjnewhouse     -i -t yeban/biolinux:8 bash
-root@1ad7e1e448a1:/home/sjnewhouse# 
+Remove Container on Exit (--rm=true|false): true
+docker run --rm=true     --name ubuntu_16.04_17070804     -v /Users/sjnewhouse:/home/sjnewhouse     -e USER=sjnewhouse     -e USERID=501     -w=/home/sjnewhouse     -i -t  bash
 ```

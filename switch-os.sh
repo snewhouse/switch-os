@@ -3,7 +3,7 @@
 # Run Docker based OS on Host OS
 # Inspired by: https://github.com/wurmlab/oswitch
 
-VERSION="17.05.0.1-alpha" ## YY.MM.VV
+VERSION="17.07.v0.1" ## YY.MM.VV
 AUTHOR="Stephen Newhouse <stephen.j.newhouse@gmail.com>"
 
 # select Docker OS
@@ -51,6 +51,7 @@ elif [[ "${1}" == "biolinux" ]]; then
     DOCKER_OS="yeban/biolinux:8"
 fi
 
+# set container base name to rep_tag
 NAME=$(echo ${1} | sed s/:/_/g )
 
 # run selected Docker OS
