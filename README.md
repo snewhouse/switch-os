@@ -2,7 +2,7 @@
 Seamlessly switch between host OS and guest OS using [Docker](https://www.docker.com/what-docker) :whale: . 
 Inspired by: [oswitch](https://github.com/wurmlab/oswitch)
 
-**VERSION=17.07.v0.1**  
+**VERSION=17.07.v0.2**  
 **AUTHOR=Stephen Newhouse <stephen.j.newhouse@gmail.com>**  
 
 [![DOI](https://zenodo.org/badge/89929646.svg)](https://zenodo.org/badge/latestdoi/89929646)
