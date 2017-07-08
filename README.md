@@ -4,15 +4,6 @@ Seamlessly switch between host OS and guest OS using [Docker](https://www.docker
 **VERSION=17.07.v0.1**  
 **AUTHOR=Stephen Newhouse <stephen.j.newhouse@gmail.com>**  
 
-## Current Guest/Docker OS's:
-- ubuntu:16.04  
-- yeban/biolinux:8
-
-To use any other image on your machine, just provide <REPOSITORY:TAG>
-If image is not already on your system, Docker will pull it from
-Docker Hub, if its available.
-
-
 Inspired by: [oswitch](https://github.com/wurmlab/oswitch)
 
 ## Requirements
@@ -38,6 +29,15 @@ Inspired by: [oswitch](https://github.com/wurmlab/oswitch)
       List Images:
       
             switch-os.sh list      
+
+
+## Current Guest/Docker OS's:
+- ubuntu:16.04  
+- yeban/biolinux:8
+
+To use any other image on your machine, just provide <REPOSITORY:TAG>
+If image is not already on your system, Docker will pull it from
+Docker Hub, if its available.
 
 **The `docker run` command**
 ```bash
