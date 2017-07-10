@@ -101,7 +101,7 @@ Stephen J Newhouse. (2017, July 8). snewhouse/switch-os: 17.07.v0.2. Zenodo. htt
 
 ### Contributors
 
-Full list at [Contributors](https://github.com/snewhouse/exotic-dna-ngs/blob/master/CONTRIBUTERS.md)
+Full list at [Contributors](https://github.com/snewhouse/switch-os/blob/master/contributors.md)
 
 ******
 
