@@ -94,3 +94,22 @@ Stephen J Newhouse. (2017, July 8). snewhouse/switch-os: 17.07.v0.2. Zenodo. htt
   url          = {https://doi.org/10.5281/zenodo.824419}
 }
 ```
+
+## Core Contributors
+
+- Stephen J Newhouse | stephen.j.newhouse@gmail.com | git:[snewhouse](https://github.com/snewhouse) | twitter:[@s_j_newhouse](https://twitter.com/s_j_newhouse)
+
+### Contributors
+
+Full list at [Contributors](https://github.com/snewhouse/exotic-dna-ngs/blob/master/CONTRIBUTERS.md)
+
+******
+
+<p align="center">
+  Development funded as part of:</br>
+  <a href="http://www.maudsleybrc.nihr.ac.uk/">NIHR Maudsley Biomedical Research Centre (BRC), King's College London</a> and the </br>  
+    <a href="http://www.ucl.ac.uk/health-informatics/">Farr Institute of Health Informatics Research, UCL Institute of Health Informatics, University College London</a>
+  </br>
+  <a href="http://phidatalab.org/">PHI Data Lab</a>:</br>
+  <a href="https://www.kcl.ac.uk/ioppn/index.aspx">Institute of Psychiatry, Psychology & Neuroscience,King's College London</a>.
+</p>
