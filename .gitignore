@@ -1,3 +1,2 @@
-.idea/
-switch-os.iml
-
+.idea/*
+*.iml

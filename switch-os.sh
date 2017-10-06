@@ -61,7 +61,7 @@ CMD="docker run --rm=${2} \
     -e USER=${USER} \
     -e USERID=${UID} \
     -w=/home/${USER} \
-    -i -t ${DOCKER_OS} bash"
+    -i -t ${DOCKER_OS} /bin/bash"
 
 # print to screen
 echo -e "switch-os:${VERSION}
