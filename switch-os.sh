@@ -45,6 +45,8 @@ if [[ $# -eq 0 ]]; then
 elif [[ "${1}" == "list" ]]; then
     docker images
     exit 1
+elif [[ $# -gt 1 ]]; then
+    DOCKER_OS="${1}"
 elif [[ "${1}" == "ubuntu" ]]; then
     DOCKER_OS="ubuntu:16.04"
 elif [[ "${1}" == "biolinux" ]]; then
